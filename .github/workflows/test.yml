@@ -6,6 +6,10 @@ on: [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        beta: [1, 2]
+        alpha: [4, 3]
 
     steps:
       - uses: actions/checkout@v1
