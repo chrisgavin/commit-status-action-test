@@ -13,3 +13,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: chrisgavin/commit-status-action@master
+        with:
+          steps: ${{ toJSON(steps) }}
